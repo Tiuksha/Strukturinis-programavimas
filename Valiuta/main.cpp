@@ -1,41 +1,108 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 int main() {
+    int pasirinkimas;
+    int suma;
     int choice = 0;
-    int EUR;
-    EUR = 1;
-    int USD;
-    USD = 1.1156;
-    int GBP;
-    GBP = 0.8395;
-    int INR;
-    INR = 93.3250;
+    double GBP_Bendras = 0.8593;
+    double GBP_Pirkti = 0.8450;
+    double GBP_Parduoti = 0.9060;
+    double USD_Bendras = 1.0713;
+    double USD_Pirkti = 1.0547;
+    double USD_Parduoti = 1.1309;
+    double INR_Bendras = 88.8260;
+    double INR_Pirkti = 85.2614;
+    double INR_Parduoti = 92.8334;
 
-
-    while(choice !=4) {
-        cout<<"----Valiutu kursu skaiciuokle----"<<endl;
-        cout<<"1 Palyginti valiuta"<<endl;
-        cout<<"2 Pirkti valiuta"<<endl;
-        cout<<"3 Parduoti valiuta"<<endl;
-        cout<<"4 Baigti darba"<<endl;
-        cout<<"Jusu pasirinkimas: "<<endl;
-        cin>>choice;
-        switch(choice) {
-            case 1:
-                cout<<"Jus pasirinkote pirma opcija: ";
+    while (true) {
+        while(choice !=4) {
+            cout<<"----Valiutu kursu skaiciuokle----"<<endl;
+            cout<<"1 Palyginti valiuta"<<endl;
+            cout<<"2 Pirkti valiuta"<<endl;
+            cout<<"3 Parduoti valiuta"<<endl;
+            cout<<"4 Baigti darba"<<endl;
             cout<<"Jusu pasirinkimas: "<<endl;
-            cout<<"1 USD"<<endl;
-            cin>>USD;
-            cout<<"1 EUR = 1.1156 USD"<<endl;
-            cout<<"2 GBP"<<endl;
-            cin>>GBP;
-            cout<<"1 EUR = 0.8395 GBP"<<endl;
-            cout<<"3 INR"<<endl;
-            cout<<"1 EUR = 93.3250 INR"<<endl;
-            cin>>INR;
-            break;
-        }
+            cin>>choice;
+            switch(choice) {
+                case 1:
+                    cout<<"Pasirinkite valiuta palyginimui: "<<endl;
+                cout<<"1 USD"<<endl;
+                cout<<"2 GBP"<<endl;
+                cout<<"3 INR"<<endl;
+                cin>>pasirinkimas;
+                cout<<"Iveskite suma eurais: "<<endl;
+                cin>>suma;
+                switch (pasirinkimas) {
+                    case 1:
+                        cout<<fixed<<setprecision(2)<<suma<<" EUR = "<<USD_Bendras*suma<<" USD"<<endl;
+                    break;
+                    case 2:
+                        cout<<fixed<<setprecision(2)<<suma<<" EUR = "<<GBP_Bendras*suma<<" GBP"<<endl;
+                    break;
+                    case 3:
+                        cout<<fixed<<setprecision(2)<<suma<<" EUR = "<<INR_Bendras*suma<<" INR"<<endl;
+                    break;
+                    default:
+                        cout<<"Tokios opcijos nera. Bandikite dar karta"<<endl;
+                    break;
+                }
+                break;
+                case 2:
+                    cout<<"Pasirinkite valiuta pirkimui: "<<endl;
+                cout<<"1 USD"<<endl;
+                cout<<"2 GBP"<<endl;
+                cout<<"3 INR"<<endl;
+                cin>>pasirinkimas;
+                cout<<"Iveskite suma eurais: "<<endl;
+                cin>>suma;
+                switch (pasirinkimas) {
+                    case 1:
+                        cout<<fixed<<setprecision(2)<<suma<<" EUR = "<<USD_Pirkti*suma<<" USD"<<endl;
+                    break;
+                    case 2:
+                        cout<<fixed<<setprecision(2)<<suma<<" EUR = "<<GBP_Pirkti*suma<<" GBP"<<endl;
+                    break;
+                    case 3:
+                        cout<<fixed<<setprecision(2)<<suma<<" EUR = "<<INR_Pirkti*suma<<" INR"<<endl;
+                    break;
+                    default:
+                        cout<<"Tokios opcijos nera. Bandikite dar karta"<<endl;
+                    break;
+                }
+                break;
+                case 3:
+                    cout<<"Pasirinkite valiuta pardavimui: "<<endl;
+                cout<<"1 USD"<<endl;
+                cout<<"2 GBP"<<endl;
+                cout<<"3 INR"<<endl;
+                cin>>pasirinkimas;
+                cout<<"Iveskite suma eurais: "<<endl;
+                cin>>suma;
+                switch (pasirinkimas) {
+                    case 1:
+                        cout<<fixed<<setprecision(2)<<suma<<" EUR = "<<USD_Parduoti*suma<<" USD"<<endl;
+                    break;
+                    case 2:
+                        cout<<fixed<<setprecision(2)<<suma<<" EUR = "<<GBP_Parduoti*suma<<" GBP"<<endl;
+                    break;
+                    case 3:
+                        cout<<fixed<<setprecision(2)<<suma<<" EUR = "<<INR_Parduoti*suma<<" INR"<<endl;
+                    break;
+                    default:
+                        cout<<"Tokios opcijos nera. Bandikite dar karta"<<endl;
+                    break;
+                }
+                break;
+                case 4:
+                    return 0;
+                default: cout<<"Tokios opcijos nera."<<endl;
+                break;
+
+            }
+    }
+
         return 0;
     }
     }
