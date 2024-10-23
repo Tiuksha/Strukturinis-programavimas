@@ -1,0 +1,3 @@
+C:/Users/dtyuk/Desktop/Strukturinis-programavimas-main/2 praktinis/cmake-build-debug/CMakeFiles/2_praktinis.dir
+C:/Users/dtyuk/Desktop/Strukturinis-programavimas-main/2 praktinis/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/dtyuk/Desktop/Strukturinis-programavimas-main/2 praktinis/cmake-build-debug/CMakeFiles/rebuild_cache.dir
