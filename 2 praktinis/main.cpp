@@ -40,7 +40,7 @@ void zaidimas() {
         }
     }
 }
-void void_fizzbuzz(int n) {
+void FizzBuzz(int n) {
     for (int i = 1; i <= n; i++) {
         if (i % 3 == 0 && i % 5 == 0) {
             cout << "FizzBuzz" << endl;
@@ -56,8 +56,7 @@ void void_fizzbuzz(int n) {
 
 int main() {
     int choice = 0;
-    while(choice != 5)
-    do {
+    while(choice != 5) {
         cout << "Pasirinkite funkcija:"<<endl;
         cout << "1. Patikrinti ar raide yra balse"<<endl;
         cout << "2. Rasti didziausia bendra dalikli"<<endl;
@@ -91,10 +90,10 @@ int main() {
                 break;
             case 4: {
                 int n;
-                cout << "Iveskite teigiama sveikaji skaiciu n: ";
+                cout << "Iveskite teigiama sveikaji skaiciu n: "<<endl;
                 cin >> n;
                 if (n > 0) {
-                    void_fizzbuzz(n);
+                    FizzBuzz(n);
                 } else {
                     cout << "Įvestas skaičius turi būti teigiamas." << endl;
                 }
@@ -109,7 +108,7 @@ int main() {
             break;
 
         }
-    }while(choice != 5);
+    }
 
     return 0;
 }
